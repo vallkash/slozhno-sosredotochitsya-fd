@@ -1,5 +1,111 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-image: var(--bg-image) ;
+  background-position: center;
+  background-repeat: no repeat;
+  background-attachment: fixed;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'IBM Plex mono', serif;
+  font-size: 1rem; /*h2 ставит шрифт 27px - надо поправить*/
+  
+}
+
+.header {
+  block-size: 100vh;
+  min-block-size: 668px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.bulb {
+  color: var(--accent-color);
+  position: absolute;
+  justify-self: end;
+  margin-inline-end: 38px;
+}
+
+.bulb::after {
+  content: "";
+  position: absolute;
+  align-self: center;
+  margin-left: 10px;
+  width: 9px; /*добавить тень в соответствии с макетом*/
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+}
+
+.header, .footer {
+  /*уголки добавить в темной теме , с помощью псевдоэлементов 
+  и указания границ для двух сторон.
+  позиционирование уголков абсолютное
+  отнрсительно родителя*/
+}
+ 
+.header__theme-menu {
+  justify-self: end;
+  align-self: center;
+}
+
+.title {
+  color: var(--title-color);
+  font-size: var(--title-size);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.title__description {
+  block-size: fit-content;
+  font-weight: 700;
+}
+
+.title__decor {
+  background-color: var(--accent-color);
+  color: var(--headline-color);
+}
+
+.headline__accent {
+  color: var(--accent-color);
+}
+
+.text__link {
+  text-shadow: 2px 2px #FF0070;
+  text-decoration: none;
+}
+
+.text__link:hover {
+  border-block-end: 1px solid var(--text-color);
+}
+
+.text__link:focus {
+  border: 1px solid var(--text-color);
+}
+
+.advices__list-item {
+  background-color: var(--accent-color);
+  color: var(--headline-color);
+  font-weight: 400;
+}
+
+.gallery {
+  display: grid;
+}
+
+.footer {
+  block-size: 100vh;
+  min-block-size: 668px;
+  align-content: center;
+  justify-items: center;
+}
+
+.footer__title {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1024px) {
+
 }

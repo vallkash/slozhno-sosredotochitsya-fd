@@ -1,4 +1,10 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+:root {
+  --bg-image: url(../images/cover-image-dark.png);
+  --bg-color: #000028;
+  --accent-color: #ff0070;
+  --title-color: #DB00FF;
+  --title-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  /*для других экранов clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem)*/
+  --main-text-color: #F1B2CE;
+  --headline-color: #000028;
+}
