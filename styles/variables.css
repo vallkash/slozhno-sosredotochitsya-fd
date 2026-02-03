@@ -7,7 +7,8 @@
   /*для других экранов clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem)*/
   --main-text-color: #F1B2CE;
   --headline-color: #000028;
-  --small-gap: 10px;
-  --medium-gap:40px;
-  --large-gap:50px;
+  --xs-gap: 10px;
+  --s-gap: 20px;
+  --m-gap:40px;
+  --l-gap:50px;
 }

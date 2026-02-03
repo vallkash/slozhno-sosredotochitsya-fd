@@ -67,11 +67,26 @@
 
 .content {
   display: grid;
-  gap: var(--large-gap);
+  gap: var(--l-gap);
 }
 
 .headline__accent {
   color: var(--accent-color);
+}
+
+.segment {
+  display: grid;
+  gap: 20px;
+}
+
+.card__list {
+  display: grid;
+  gap: 20px;
+}
+
+.card {
+  display: grid;
+  gap: 10px;
 }
 
 .text__link {
@@ -95,7 +110,7 @@
 
 .gallery {
   display: grid;
-  gap: var(--small-gap);
+  gap: var(--xs-gap);
 }
 
 .gallery__picture {
