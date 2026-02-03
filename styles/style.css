@@ -98,6 +98,10 @@
   gap: var(--small-gap);
 }
 
+.gallery__picture {
+  inline-size: 100vw;
+}
+
 .footer {
   block-size: 100vh;
   min-block-size: 668px;
