@@ -1,13 +1,10 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
-:root.theme-light {
-  
-}
-
-.bulb {
-  /*display: none;*/
-}
+/*:root.theme-light {
+  --bg-image: url(../images/cover-image-light.png);
+  --bg-color: #FFF1F7;
+  --accent-color: #FF8DCB;
+  --title-color: #FFC2E6;
+  --main-text-color: #353430;
+  --headline-color: #353430;
+  --visibility: none;
+  --border-color: var(--main-text-color);
+}*/

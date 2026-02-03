@@ -1,15 +1,16 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .page {
   background-image: var(--bg-image) ;
   background-position: center;
   background-repeat: no repeat;
   background-attachment: fixed;
   background-color: var(--bg-color);
-  color: var(--text-color);
+  color: var(--main-text-color);
   font-family: 'IBM Plex mono', serif;
-  font-size: 1rem; /*h2 ставит шрифт 27px - надо поправить*/
-  display: grid;
-  gap: var(--medium-gap);
+  font-size: 1.125em; 
+  display: block;
+  gap: var(--m-gap);
+  padding: 10px;
+  inline-size: 100vw;
 }
 
 .header {
@@ -19,11 +20,29 @@
   grid-template-columns: 1fr;
 }
 
+.header::before {
+  content: "";
+  border-inline-end: 1px solid var(--border-color);
+  border-block-start: 1px solid var(--border-color);
+  block-size: 25px;
+  inline-size: 25px;
+  justify-self: end;
+}
+
+.header::after {
+  content: "";
+  border-inline-start: 1px solid var(--border-color);
+  border-block-end: 1px solid var(--border-color);
+  block-size: 25px;
+  inline-size: 25px;
+}
+
 .bulb {
   color: var(--accent-color);
   position: absolute;
   justify-self: end;
-  margin-inline-end: 38px;
+  margin-inline-end: 28px;
+  display: var(--visibility);
 }
 
 .bulb::after {
@@ -31,10 +50,13 @@
   position: absolute;
   align-self: center;
   margin-left: 10px;
-  width: 9px; /*добавить тень в соответствии с макетом*/
+  width: 9px; 
   height: 9px;
   border-radius: 50%;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-color) 40%, transparent);
+  filter: blur(1px);
   background-color: var(--accent-color);
+  display: var(--visibility);
 }
 
 .header, .footer {
@@ -63,15 +85,18 @@
 .title__decor {
   background-color: var(--accent-color);
   color: var(--headline-color);
+  font-size: 1em; 
 }
 
 .content {
   display: grid;
   gap: var(--l-gap);
+  align-self: center;
 }
 
 .headline__accent {
   color: var(--accent-color);
+  font-size: 1em; 
 }
 
 .segment {
@@ -110,11 +135,11 @@
 
 .gallery {
   display: grid;
-  gap: var(--xs-gap);
+  gap: var(--s-gap);
 }
 
 .gallery__picture {
-  inline-size: 100vw;
+  inline-size: 100%;
 }
 
 .footer {
@@ -129,7 +154,9 @@
 }
 
 @media (min-width: 768px) {
+  
 
+  
 }
 
 @media (min-width: 1024px) {

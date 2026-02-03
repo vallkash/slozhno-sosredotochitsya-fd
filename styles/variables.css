@@ -4,11 +4,20 @@
   --accent-color: #ff0070;
   --title-color: #DB00FF;
   --title-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  /*для других экранов clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem)*/
   --main-text-color: #F1B2CE;
   --headline-color: #000028;
-  --xs-gap: 10px;
-  --s-gap: 20px;
-  --m-gap:40px;
-  --l-gap:50px;
+  --s-gap: 10px;
+  --m-gap: 40px;
+  --l-gap: 50px;
+  --visibility: ;
+  --border-color: var(--accent-color);
+}
+
+@media (min-width: 768px) or (min-width: 1024px) {
+  :root {
+    --s-gap: 20px;
+    --m-gap: 60px;
+    --l-gap: 80px;
+    --title-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
 }
