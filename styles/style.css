@@ -8,7 +8,8 @@
   color: var(--text-color);
   font-family: 'IBM Plex mono', serif;
   font-size: 1rem; /*h2 ставит шрифт 27px - надо поправить*/
-  
+  display: grid;
+  gap: var(--medium-gap);
 }
 
 .header {
@@ -64,6 +65,11 @@
   color: var(--headline-color);
 }
 
+.content {
+  display: grid;
+  gap: var(--large-gap);
+}
+
 .headline__accent {
   color: var(--accent-color);
 }
@@ -89,6 +95,7 @@
 
 .gallery {
   display: grid;
+  gap: var(--small-gap);
 }
 
 .footer {
