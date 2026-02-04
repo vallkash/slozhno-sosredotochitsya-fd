@@ -7,14 +7,21 @@
   color: var(--main-text-color);
   font-family: "IBM Plex mono", serif;
   font-size: 1.125em;
-  display: block;
-  gap: var(--m-gap);
+  display: flex;
+  flex-direction: column;
   inline-size: 100vw;
+  justify-self: center;
 }
+
 .header,
 .content,
 .footer {
-  padding: var(--s-gap);
+  padding: 0 var(--s-gap);
+}
+
+.content,
+.footer {
+  margin-block-start: var(--m-gap);
 }
 
 .header {
@@ -22,6 +29,7 @@
   min-block-size: 668px;
   display: grid;
   grid-template-columns: 1fr;
+  padding-block-start: var(--s-gap);
 }
 
 .header::before {
@@ -39,6 +47,7 @@
   border-block-end: 1px solid var(--border-color);
   block-size: 25px;
   inline-size: 25px;
+  align-self: end;
 }
 
 .bulb {
@@ -181,6 +190,7 @@
   block-size: 100vh;
   min-block-size: 668px;
   display: grid;
+  padding-block-end: var(--s-gap);
 }
 
 .footer__title {
@@ -263,6 +273,7 @@
   .header,
   .footer {
     min-block-size: 768px;
+    max-block-size: 768px;
   }
 
   .header__theme-menu {
