@@ -11,6 +11,8 @@
   --l-gap: 50px;
   --visibility: ;
   --border-color: var(--accent-color);
+  --menu-color: var(--accent-color);
+  --headline-color: var(--accent-color);
 }
 
 @media (min-width: 768px) or (min-width: 1024px) {

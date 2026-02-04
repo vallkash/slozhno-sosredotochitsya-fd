@@ -7,4 +7,6 @@
   --headline-color: #000028;
   --visibility: ;
   --border-color: var(--accent-color);
+  --menu-color: var(--accent-color);
+  --headline-color: var(--accent-color);
 }

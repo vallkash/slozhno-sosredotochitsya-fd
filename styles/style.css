@@ -72,21 +72,23 @@
 .header__theme-menu-button {
   background-color: transparent;
   border: none;
-  color: var(--accent-color);
+  color: var(--menu-color);
+  block-size: 26px;
+  min-inline-size: 70px;
 }
 
 .header__theme-menu-button:hover {
-  border: 2px solid color-mix(in srgb, var(--accent-color) 50%, transparent);
+  border: 2px solid color-mix(in srgb, var(--border-color) 50%, transparent);
 }
 
 .header__theme-menu-button:focus-visible {
   outline: none;
-  border-block-end: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--border-color);
 }
 
 .header__theme-menu-button_active {
   pointer-events: none;
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--border-color);
 }
 
 .title {
@@ -114,7 +116,7 @@
 }
 
 .headline__accent {
-  color: var(--accent-color);
+  color: var(--headline-color);
   font-size: 1em;
 }
 
