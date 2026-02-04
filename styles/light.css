@@ -8,7 +8,6 @@
   --visibility: none;
   --border-color: var(--main-text-color);
   --menu-color: var(--main-text-color);
-  --headline-color: var(--main-text-color);
 }
 
 @media (prefers-color-scheme: light) {

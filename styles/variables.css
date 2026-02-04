@@ -2,17 +2,16 @@
   --bg-image: url(../images/cover-image-dark.png);
   --bg-color: #000028;
   --accent-color: #ff0070;
-  --title-color: #DB00FF;
+  --title-color: #db00ff;
   --title-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  --main-text-color: #F1B2CE;
-  --headline-color: #000028;
+  --main-text-color: #f1b2ce;
   --s-gap: 10px;
   --m-gap: 40px;
   --l-gap: 50px;
   --visibility: ;
   --border-color: var(--accent-color);
   --menu-color: var(--accent-color);
-  --headline-color: var(--accent-color);
+  --headline-color: #000028;
 }
 
 @media (min-width: 768px) or (min-width: 1024px) {

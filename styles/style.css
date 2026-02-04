@@ -9,8 +9,12 @@
   font-size: 1.125em;
   display: block;
   gap: var(--m-gap);
-  padding: var(--s-gap);
   inline-size: 100vw;
+}
+.header,
+.content,
+.footer {
+  padding: var(--s-gap);
 }
 
 .header {
@@ -116,7 +120,7 @@
 }
 
 .headline__accent {
-  color: var(--headline-color);
+  color: var(--menu-color);
   font-size: 1em;
 }
 
@@ -133,6 +137,7 @@
 .card {
   display: grid;
   gap: 10px;
+  font-size: 1em;
 }
 
 .text__link {
@@ -243,11 +248,21 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: fit-content;
   }
+
+  .header,
+  .footer {
+    min-block-size: 1024px;
+  }
 }
 
 @media (min-width: 1024px) {
   .header {
     grid-template-rows: 0 auto;
+  }
+
+  .header,
+  .footer {
+    min-block-size: 768px;
   }
 
   .header__theme-menu {
@@ -259,9 +274,23 @@
     display: flex;
   }
 
+  .reducing__things {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "title . ."
+      "list list list";
+  }
+
+  .reducing__things__title {
+    grid-area: title;
+  }
+
   .reducing__things__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-area: list;
   }
 
   .reducing__things__list .title__decor {
