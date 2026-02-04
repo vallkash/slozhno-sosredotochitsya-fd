@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="ru">
+  
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -14,7 +15,7 @@
   <link rel="stylesheet" href="./styles/light.css">
   <link rel="icon" href="./images/favicon.ico">
   <link rel="icon" href="./images/icon.svg">
-  <link rel="icon" href="./images/mobile-icon.png"> 
+  <link rel="icon" href="./images/mobile-icon.png">
   <script src="./scripts/script.js">
   </script>
 </head>
@@ -26,18 +27,18 @@
       <ul class="header__theme-menu-list">
         <li class="header__theme-menu-item">
           <button class="header__theme-menu-button header__theme-menu-button_type_light">
-            День
+            день
           </button>
         </li>
         <li class="header__theme-menu-item">
           <button class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
             disabled>
-            Авто
+            авто
           </button>
         </li>
         <li class="header__theme-menu-item">
           <button class="header__theme-menu-button header__theme-menu-button_type_dark">
-            Неон
+            неон
           </button>
         </li>
       </ul>
@@ -50,8 +51,8 @@
   </header>
   <main class="content">
     <section class="segment reasons">
-      <ul class="card__list">
-        <h2 class="reasons__title headline__accent">Почему сосредоточиться так сложно</h2>
+      <h2 class="reasons__title headline__accent ">Почему сосредоточиться так сложно</h2>
+      <ul class="card__list reasons__list">
         <li class="card">
           <h3 class="reasons__item title__decor">Многозадачность</h3>
           <p>
@@ -83,7 +84,7 @@
     </section>
     <section class="segment reducing__things">
       <h2 class="reducing__things__title headline__accent">Что снижает концентрацию внимания?</h2>
-      <ul class="card__list">
+      <ul class="card__list reducing__things__list">
         <li class="card">
           <h3 class="reducing__things__item title__decor">Концентрация</h3>
           <p>Как концентрация может снижаться из-за… концентрации? Любая стрессовая ситуация (и резко меняющийся
@@ -117,8 +118,8 @@
     <section class="segment advices">
       <h2 class="advices__title headline__accent">Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх
         секунд)</h2>
-      <h3 class="title__decor advices__list">5 простых (на самом деле не очень) советов</h3>
-      <ul class="card__list">
+      <ul class="card__list advices__list">
+        <h3 class="title__decor">5 простых (на самом деле не очень) советов</h3>
         <li class="card">
           <h4 class="advices__list-item">Представьте небо и облака</h4>
           <p>Или листья в ручье. Тут дело в лёгкой медитации, которая помогает успокоиться.
@@ -171,18 +172,31 @@
     </section>
     <section class="segment gallery">
       <h2 class="title__decor">А можно в картинках?</h2>
-      <img class="gallery__picture" loading="lazy" src="./images/sunset.png"
-        alt="Закат среди гор и моря в розовых оттенках">
-      <img class="gallery__picture" loading="lazy" src="./images/ice-cream.png" alt="Пиала с мороженным и фруктами">
-      <img class="gallery__picture" loading="lazy" src="./images/tape.png"
-        alt="Компакт кассета и уведомления вокруг неё">
-      <img class="gallery__picture" loading="lazy" src="./images/books.png"
-        alt="Стопка книг с чашкой на вершине в розовых тонах">
-      <img class="gallery__picture" loading="lazy" src="./images/street.png" alt="Улица в Японии">
+      <ul class="gallery__list">
+        <li class="gallery__item">
+          <img class="gallery__picture" loading="lazy" src="./images/sunset.png"
+            alt="Закат среди гор и моря в розовых оттенках">
+        </li>
+        <li class="gallery__item">
+          <img class="gallery__picture" loading="lazy" src="./images/ice-cream.png" alt="Пиала с мороженным и фруктами">
+        </li>
+        <li class="gallery__item">
+          <img class="gallery__picture" loading="lazy" src="./images/tape.png"
+            alt="Компакт кассета и уведомления вокруг неё">
+        </li>
+        <li class="gallery__item">
+          <img class="gallery__picture" loading="lazy" src="./images/books.png"
+            alt="Стопка книг с чашкой на вершине в розовых тонах">
+        </li>
+        <li class="gallery__item">
+          <img class="gallery__picture" loading="lazy" src="./images/street.png" alt="Улица в Японии">
+        </li>
+      </ul>
     </section>
     <footer class="footer">
       <h2 class="title footer__title">focus</h2>
     </footer>
   </main>
 </body>
+
 </html>
