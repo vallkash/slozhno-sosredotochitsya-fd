@@ -1,12 +1,12 @@
 .page {
-  background-image: var(--bg-image) ;
+  background-image: var(--bg-image);
   background-position: center;
   background-repeat: no repeat;
   background-attachment: fixed;
   background-color: var(--bg-color);
   color: var(--main-text-color);
-  font-family: 'IBM Plex mono', serif;
-  font-size: 1.125em; 
+  font-family: "IBM Plex mono", serif;
+  font-size: 1.125em;
   display: block;
   gap: var(--m-gap);
   padding: var(--s-gap);
@@ -50,7 +50,7 @@
   position: absolute;
   align-self: center;
   margin-left: 10px;
-  width: 9px; 
+  width: 9px;
   height: 9px;
   border-radius: 50%;
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-color) 40%, transparent);
@@ -58,7 +58,7 @@
   background-color: var(--accent-color);
   display: var(--visibility);
 }
- 
+
 .header__theme-menu {
   justify-self: end;
   align-self: center;
@@ -103,7 +103,7 @@
 .title__decor {
   background-color: var(--accent-color);
   color: var(--headline-color);
-  font-size: 1em; 
+  font-size: 1em;
 }
 
 .content {
@@ -114,7 +114,7 @@
 
 .headline__accent {
   color: var(--accent-color);
-  font-size: 1em; 
+  font-size: 1em;
 }
 
 .segment {
@@ -133,7 +133,7 @@
 }
 
 .text__link {
-  text-shadow: 2px 2px #FF0070;
+  text-shadow: 2px 2px #ff0070;
   text-decoration: none;
 }
 
@@ -152,13 +152,18 @@
   font-weight: 400;
 }
 
-.gallery, .gallery__list {
-  display: grid;
-  gap: var(--s-gap);
-  
+.advices__list .title__decor {
+  font-weight: 700;
 }
 
-.gallery__picture, .gallery__item {
+.gallery,
+.gallery__list {
+  display: grid;
+  gap: var(--s-gap);
+}
+
+.gallery__picture,
+.gallery__item {
   inline-size: 100%;
   block-size: 100%;
   object-fit: cover;
@@ -167,8 +172,6 @@
 .footer {
   block-size: 100vh;
   min-block-size: 668px;
-  /*align-content: center;
-  justify-items: center;*/
   display: grid;
 }
 
@@ -200,7 +203,7 @@
     inline-size: 50%;
     justify-self: end;
   }
-  
+
   .gallery__list {
     display: grid;
     grid-template-columns: repeat(auto, 1fr);
@@ -224,13 +227,15 @@
     grid-column: 2 / 4;
   }
 
-  .advices__list, .reasons__list {
+  .advices__list,
+  .reasons__list {
     grid-column: 2 span;
   }
 }
 
 @media (min-width: 768px) {
-  .advices, .reasons {
+  .advices,
+  .reasons {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: fit-content;
@@ -241,7 +246,7 @@
   .header {
     grid-template-rows: 0 auto;
   }
-  
+
   .header__theme-menu {
     justify-self: center;
     align-self: baseline;
@@ -250,7 +255,7 @@
   .header__theme-menu-list {
     display: flex;
   }
-  
+
   .reducing__things__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
