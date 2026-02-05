@@ -282,8 +282,8 @@
 /*
   .gallery__list {
     max-block-size: calc(100vw + 12px);
-  } 
-}*/
+  } */
+}
 
 @media (min-width: 1024px) {
   .header {
