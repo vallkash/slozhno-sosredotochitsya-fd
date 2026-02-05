@@ -5,7 +5,7 @@
   --title-color: #db00ff;
   --main-text-color: #f1b2ce;
   --headline-color: #000028;
-  --visibility: ;
+  --visibility: auto;
   --border-color: var(--accent-color);
   --menu-color: var(--accent-color);
 }

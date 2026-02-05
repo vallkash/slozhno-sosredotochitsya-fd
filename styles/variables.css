@@ -8,7 +8,7 @@
   --s-gap: 10px;
   --m-gap: 40px;
   --l-gap: 50px;
-  --visibility: ;
+  --visibility: auto;
   --border-color: var(--accent-color);
   --menu-color: var(--accent-color);
   --headline-color: #000028;

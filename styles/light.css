@@ -20,5 +20,6 @@
     --headline-color: #353430;
     --visibility: none;
     --border-color: var(--main-text-color);
+    --menu-color: var(--main-text-color);
   }
 }
