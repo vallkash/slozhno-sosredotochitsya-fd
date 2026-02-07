@@ -7,8 +7,8 @@
   color: var(--main-text-color);
   font-family: "IBM Plex mono", serif;
   font-size: 1.125em;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   inline-size: 100%;
   line-height: 23.4px;
   /*justify-self: center;*/
@@ -18,11 +18,6 @@
 .content,
 .footer {
   padding: 0 var(--s-gap);
-}
-
-.header,
-.footer {
-  padding-block-start: var(--s-gap);
 }
 
 .content,
@@ -35,6 +30,8 @@
   min-block-size: 668px;
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: 1fr min-content 1fr;
+  align-items: center;
   padding-block: var(--s-gap);
 }
 
@@ -63,6 +60,17 @@
   align-self: end;
 }
 
+.header::before,
+.header::after {
+  content: "";
+  position: absolute;
+}
+
+.header::before {
+  content: "";
+  align-self: baseline;
+}
+
 .bulb {
   color: var(--accent-color);
   position: absolute;
@@ -87,12 +95,12 @@
 
 .header__theme-menu {
   justify-self: end;
-  align-self: center;
 }
 
 .header__theme-menu-list {
   display: grid;
   gap: 10px;
+  max-block-size: 98px;
 }
 
 .header__theme-menu-button {
@@ -141,6 +149,7 @@
   display: grid;
   gap: var(--l-gap);
   align-self: center;
+  font-weight: 400;
 }
 
 .headline__accent {
@@ -193,6 +202,7 @@
 .gallery__list {
   display: grid;
   gap: var(--s-gap);
+  grid-template-rows: repeat(auto, min-content);
 }
 
 .gallery__picture,
@@ -206,7 +216,7 @@
   block-size: 100vh;
   min-block-size: 668px;
   display: grid;
-  padding-block-end: var(--s-gap);
+  padding-block: var(--s-gap);
 }
 
 .footer__title {
@@ -216,22 +226,28 @@
 
 @media (min-width: 768px) or (min-width: 1024px) {
   .header {
-    padding-left: 0;
+    padding-inline-start: 0;
+    align-items: initial;
   }
 
   .header::after {
     margin-left: var(--s-gap);
   }
-  
+
   .title__description {
     inline-size: calc(50% - (var(--s-gap) / 2));
     justify-self: end;
   }
 
+  .advices__list,
+  .reasons__list,
+  .advices__subtitle {
+    grid-column: 2 / -1;
+  }
+
   .gallery__list {
     display: grid;
-    grid-template-columns: repeat(auto, 1fr);
-    grid-template-rows: repeat(auto, 1fr);
+    grid-template-columns: repeat(3, fit-content);
     grid-auto-flow: dense;
   }
 
@@ -251,15 +267,28 @@
   .gallery__item:nth-child(5) {
     grid-column: 2 / 4;
   }
-
-  .advices__list,
-  .reasons__list {
-    grid-column: 2 span;
-  }
 }
 
 @media (min-width: 768px) {
-  .advices,
+  .header,
+  .footer {
+    block-size: 1024px;
+  }
+
+  .header,
+  .footer,
+  .content {
+    padding-inline-end: var(--s-gap);
+  }
+
+  .title__description {
+    align-self: center;
+  }
+
+  .header__theme-menu {
+    align-self: center;
+  }
+
   .reasons {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -271,35 +300,47 @@
     min-inline-size: 236px;
   }
 
-  .header,
-  .footer {
-    min-block-size: 1024px;
-  }
-
   .reducing__things__title {
     inline-size: min-content;
   }
-/*
+
+  .advices {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+      "title subtitle"
+      "title list";
+  }
+
+  .advices__title {
+    grid-area: title;
+  }
+
+  .advices__subtitle {
+    grid-area: subtitle;
+  }
+
+  .advices__list {
+    grid-area: list;
+  }
+
   .gallery__list {
-    max-block-size: calc(100vw + 12px);
-  } */
+    grid-template-rows: 192px 229px 318px;
+  }
 }
 
 @media (min-width: 1024px) {
-  .header {
-    grid-template-rows: 0 auto;
-  }
-
   .header,
   .footer {
-    min-block-size: 768px;
-    max-block-size: 768px;
+    block-size: initial;
+    height: 768px;
   }
 
   .header__theme-menu {
     justify-self: center;
     display: grid;
     min-block-size: 299px;
+    margin-inline-start: var(--s-gap);
   }
 
   .header__theme-menu-list {
@@ -308,9 +349,13 @@
     align-content: baseline;
   }
 
+  .card {
+    align-content: start;
+  }
+
   .advices__title,
   .reasons__title {
-    min-inline-size: 236px;
+    inline-size: 315px;
   }
 
   .reducing__things {
@@ -337,7 +382,11 @@
     max-block-size: min-content;
   }
 
-  .card {
-    align-content: start;
+  .advices {
+    grid-template-columns: 1fr calc((100% - 39px) / 3 * 2 + 19px);
+  }
+
+  .gallery__list {
+    grid-template-rows: 260px 315px 433px;
   }
 }
