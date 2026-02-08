@@ -11,7 +11,8 @@
   grid-template-columns: 1fr;
   inline-size: 100%;
   line-height: 23.4px;
-  /*justify-self: center;*/
+  background-size: cover;
+  justify-self: center;
 }
 
 .header,
@@ -35,40 +36,27 @@
   padding-block: var(--s-gap);
 }
 
-.header::after,
-.header::before,
-.footer::before,
-.footer::after {
+.decorated-zone::after,
+.decorated-zone::before {
   content: "";
+  position: absolute;
   block-size: 25px;
   inline-size: 25px;
 }
 
-.header::before,
-.footer::before {
+.decorated-zone::before {
   content: "";
   border-inline-end: 1px solid var(--border-color);
   border-block-start: 1px solid var(--border-color);
   justify-self: end;
+  align-self: baseline;
 }
 
-.header::after,
-.footer::after {
+.decorated-zone::after {
   content: "";
   border-inline-start: 1px solid var(--border-color);
   border-block-end: 1px solid var(--border-color);
   align-self: end;
-}
-
-.header::before,
-.header::after {
-  content: "";
-  position: absolute;
-}
-
-.header::before {
-  content: "";
-  align-self: baseline;
 }
 
 .bulb {
@@ -77,6 +65,7 @@
   justify-self: end;
   margin-inline-end: 28px;
   display: var(--visibility);
+  align-self: baseline;
 }
 
 .bulb::after {
@@ -113,12 +102,10 @@
 
 .header__theme-menu-button:hover {
   outline: 1px solid color-mix(in srgb, var(--border-color) 50%, transparent);
-  border: none;
 }
 
 .header__theme-menu-button:focus-visible {
   outline: none;
-  border: none;
   border-block-end: 1px solid var(--border-color);
 }
 
@@ -201,7 +188,11 @@
 .gallery__list {
   display: grid;
   gap: var(--s-gap);
-  grid-template-rows: repeat(auto, min-content);
+  grid-template-columns: 1fr;
+}
+
+.gallery__list {
+  grid-template-rows: 142px 355px 237px 355px 237px;
 }
 
 .gallery__picture,
@@ -271,7 +262,7 @@
 @media (min-width: 768px) {
   .header,
   .footer {
-    block-size: 1024px;
+    block-size: max(100vh, 1024px);
   }
 
   .header,
@@ -331,8 +322,7 @@
 @media (min-width: 1024px) {
   .header,
   .footer {
-    block-size: initial;
-    height: 768px;
+    block-size: max(100vh, 768px);
   }
 
   .header__theme-menu {
